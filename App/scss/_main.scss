@@ -1,7 +1,20 @@
 .main {
     overflow: hidden;
+    
 
     .container {
+        
+        @include desktop {
+            display: grid;
+            grid-template-columns: 1.5fr 3.5fr;
+        }
+
+        @include ana {
+            display: grid ;
+            grid-template-columns: 1fr 3fr;
+
+        }
+
         @include large {
             display: grid;
             grid-template-columns: 1fr;
@@ -9,6 +22,40 @@
         }
 
         .cards {
+            position: relative;
+
+            @include desktop {
+                background-image: url(/images/bg-main-desktop.png);
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                .one {
+                    max-width: 100%;
+                    position: absolute;
+                    top: 480px;
+                    left: 50%;
+                }
+
+                .two {
+                    position: relative;
+                    top: 20%;
+                    
+                    .main {
+                        max-width: 100%;
+                        position: absolute;
+                        left: 30%;
+                    }
+
+                    .logo {
+                        max-width: 100%;
+                        position: absolute;
+                        left: 40%;
+                        top: 20px;
+                    }
+                }
+            }
 
             @include large {
                 height: 320px;
@@ -55,11 +102,25 @@
         }
 
         .inputes {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
             form {
                 display: flex;
                 flex-direction: column;
                 width: 90%;
                 margin-inline: auto;
+
+                @include desktop {
+                    width: 40%;
+                }
+
+                @include ana {
+                    width: 50%;
+                }
 
                 label {
                     display: block;
@@ -120,6 +181,10 @@
                             @include large {
                                 width: 60%;
                                 margin-inline: auto;
+                            }
+
+                            @include desktop {
+                                width: 100%;
                             }
                         }
                     }

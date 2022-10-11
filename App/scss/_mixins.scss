@@ -27,3 +27,15 @@
         @content;
     }
 }
+
+@mixin desktop {
+    @media (min-width: 1001px) {
+        @content;
+    }
+}
+
+@mixin ana {
+    @media (min-width: 1001px) and (max-width: 1400px) {
+        @content;
+    }
+}
