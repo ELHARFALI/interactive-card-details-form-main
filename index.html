@@ -45,14 +45,19 @@
           </label>
           <input type="text" name="card-num" placeholder="e.g. 1234 5678 9123 0000">
 
-          <label for="date">
-            Exp. Date (MM/YY)
+          <div class="last">
+            <label for="date">
+            Exp. Date (MM/YY) <span>CVC</span>
           </label>
-          <label for="">CVC</label>
-          <input type="day" name="date" placeholder="MM">
-          <input type="day" name="date" placeholder="YY">
-          <input type="day" name="cvc" placeholder="e.g. 123">
-          <input class="submit" type="submit" value="Confirm">
+          <div class="input">
+          <input class="month" type="day" name="date" placeholder="MM">
+          <input class="year" type="day" name="date" placeholder="YY">
+          <input class="cvc" type="day" name="cvc" placeholder="e.g. 123">
+          </div>
+          <div class="btn">
+            <input class="submit" type="submit" value="Confirm">
+          </div>
+          </div>
         </form>
       </div>
 
