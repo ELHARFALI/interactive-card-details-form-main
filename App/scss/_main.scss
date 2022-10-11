@@ -1,0 +1,56 @@
+.main {
+
+    .container {
+        @include large {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 92px;
+        }
+
+        .cards {
+
+            @include large {
+                height: 320px;
+                background-image: url(/images/bg-main-mobile.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+
+                .one {
+                    max-width: 80%;
+                    position: absolute;
+                    top: 32px;
+                    right: 16px;
+                }
+
+                .two {
+                    position: relative;
+                    top: 123px;
+                    left: 16px;
+
+                    .main {
+                        max-width: 80%;
+                        position: relative;
+                    }
+
+                    .logo {
+                        max-width: 20%;
+                        position: absolute;
+                        left: 19px;
+                        top: 18px;
+
+                        @include small {
+                            max-width: 15%;
+                            top: 16px;
+                            left: 16px;
+                        }
+                    }
+                }
+            }
+
+            @include small {
+                height: 230px;
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@media (max-width: 50em) {
+  .main .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 92px;
+  }
+}
+@media (max-width: 50em) {
+  .main .container .cards {
+    height: 320px;
+    background-image: url(/images/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .main .container .cards .one {
+    max-width: 80%;
+    position: absolute;
+    top: 32px;
+    right: 16px;
+  }
+  .main .container .cards .two {
+    position: relative;
+    top: 123px;
+    left: 16px;
+  }
+  .main .container .cards .two .main {
+    max-width: 80%;
+    position: relative;
+  }
+  .main .container .cards .two .logo {
+    max-width: 20%;
+    position: absolute;
+    left: 19px;
+    top: 18px;
+  }
+}
+@media (max-width: 50em) and (max-width: 450px) {
+  .main .container .cards .two .logo {
+    max-width: 15%;
+    top: 16px;
+    left: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .main .container .cards {
+    height: 230px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */
